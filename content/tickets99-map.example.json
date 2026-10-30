@@ -1,0 +1,5 @@
+{
+  "_readme": "Copy to tickets99-map.json. ticketId = Tickets99 TicketId; ti = encrypted token from the Tickets99 admin ticket URL (…/buy/ticket?ti=<this>). One entry per website category slug in content/tickets.js.",
+  "visitor": { "ticketId": 0, "ti": "" },
+  "exhibitor": { "ticketId": 0, "ti": "" }
+}

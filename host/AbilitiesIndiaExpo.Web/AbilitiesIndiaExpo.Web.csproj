@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!-- Static host for the generated site in ../../dist (run `npm run build` first). No server-side rendering, no database. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SiteRoot>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\..\..'))</SiteRoot>
+  </PropertyGroup>
+
+  <!-- Build / F5 in Visual Studio regenerates the site first (node build/build.js), so edits to build/, content/ and assets/ show up.
+       If Node.js is missing the build still succeeds and the last generated dist/ is served. -->
+  <Target Name="GenerateStaticSite" BeforeTargets="Build" Condition="Exists('$(SiteRoot)\build\build.js')">
+    <Exec Command="node build\build.js" WorkingDirectory="$(SiteRoot)" ContinueOnError="true" />
+  </Target>
+</Project>

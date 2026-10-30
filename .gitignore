@@ -1,0 +1,10 @@
+node_modules/
+dist/
+qa/reports/
+.env
+.env.*
+!.env.example
+host/**/bin/
+host/**/obj/
+.vs/
+*.user

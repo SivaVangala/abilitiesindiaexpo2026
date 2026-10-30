@@ -1,0 +1,21 @@
+{
+  "name": "abilities-india-expo-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Abilities India Expo — accessible, multilingual event website (static build) with Tickets99 registration handoff.",
+  "scripts": {
+    "build": "node build/build.js",
+    "serve": "http-server dist -p 5310 -c-1 -g -b --silent",
+    "qa": "node qa/run-qa.js",
+    "qa:lighthouse": "node qa/run-lighthouse.js",
+    "translate": "node tools/translate.js",
+    "sync:tickets99": "node tools/sync-tickets99.js",
+    "og": "node tools/make-og.js"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.2",
+    "http-server": "^14.1.1",
+    "lighthouse": "^12.2.1",
+    "playwright-core": "^1.48.2"
+  }
+}
