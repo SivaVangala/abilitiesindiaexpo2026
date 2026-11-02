@@ -15,7 +15,7 @@
   "devDependencies": {
     "axe-core": "^4.10.2",
     "http-server": "^14.1.1",
-    "lighthouse": "^12.2.1",
+    "lighthouse": "^12.8.2",
     "playwright-core": "^1.48.2"
   }
 }
